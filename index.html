@@ -10,17 +10,105 @@
 </head>
 <body onload="index()">
     <div class="navBar">
-        <h3><a href="">navbar</a></h3>
+        <h3><a href="#intro"><img src="./assets/images/logo.png" class="logo"alt="" srcset=""></a></h3>
         <ul>
-            <a href=""  id="registrationLink"><li>Registration</li></a>
-            <a href="" id="logInLink"><li>log in</li></a>
+            <a href="#formCont"  id="registrationLink"><li>Registration</li></a>
+            <a href="#formCont" id="logInLink"><li>log in</li></a>
         </ul>
     </div>
-    <div class="intro">
-        <h1>DISCOVER PRODUCTS </h1>
-        <h2>DISCOVER PRODUCTS </h2>
+    <div class="intro" id="intro">
+            <img src="./assets/images/image1.png" alt="" srcset="">
+       <!--<h1>DISCOVER PRODUCTS </h1>
+        <h2>DISCOVER PRODUCTS </h2>--> 
     </div>
-    <div class="formContainer">
+    <div class="formContainer" id="formCont">
+        <form action="" id="registerationForm">
+            <table>
+                <tr>
+                    <td>
+                        <label for="userName">user name</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="enter user name" name="userName" id="userName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">email</label>
+                    </td>
+                    <td>
+                        <input type="email" placeholder="enter you email" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">phone</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="enter you phone" name="phone" id="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password" placeholder="enter Password">
+                    </td>
+                </tr>
+                <tr >
+                    <td></td>
+                    <td >
+                        <input type="radio"  name="gender" id="male" value="male">
+                        <span style="color: #e67564;"> male</span>
+                    </td>   
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >
+                        <input type="radio" placeholder="enter password"  name="gender" id="female" value="female">
+                        <span style="color: #e67564;">female</span>
+
+                    </td>
+
+
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">REGISTER</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+        <form action="" method="get" id="loginForm">
+            <table>
+                <tr>
+                    <td>
+                        <label for="emailLogin">email</label>
+                    </td>
+                    <td>
+                        <input type="email" placeholder="enter you email" name="email" id="emailLogin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="passwordLogin">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="passwordLogin" placeholder="enter password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">LOG IN</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
 </body>
 </html>
