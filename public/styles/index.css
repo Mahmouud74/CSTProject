@@ -185,6 +185,11 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+.latest{
+    background-color: white;
+    color: black;
+    min-height: 500px;
+}
 .footer{
     padding: 20px;
     padding-top: 20px;
