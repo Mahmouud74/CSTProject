@@ -239,6 +239,7 @@ function index(){
     smallImageArray = document.getElementsByClassName("smallImage");
     for (let i = 0; i < smallImageArray.length; i++) {
         smallImageArray[i].firstElementChild.addEventListener('click',function (e) {
+            clearInterval(slider)
             document.getElementById("sliderImage").src=e.target.src;
         })
         
@@ -254,6 +255,7 @@ function index(){
         },3000)
         i=0;
         document.getElementById("nextImage").addEventListener("click",function() {
+            console.log(i);
             clearInterval(slider)
             if(i==6){
                 i=0;
