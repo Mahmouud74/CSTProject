@@ -14,6 +14,7 @@ var phoneInput;
 var passwordInput;
 var emailLoginInput;
 var passwordLoginInput;
+var smallImageArray;
 function index(){
     userNameInput=document.getElementById("userName");
     emailInput=document.getElementById("email");
@@ -234,4 +235,44 @@ function index(){
             document.getElementById("passwordLoginCheckMark").style.display="none";
         }
     })
-}
+    //slider 
+    smallImageArray = document.getElementsByClassName("smallImage");
+    for (let i = 0; i < smallImageArray.length; i++) {
+        smallImageArray[i].firstElementChild.addEventListener('click',function (e) {
+            document.getElementById("sliderImage").src=e.target.src;
+        })
+        
+    }   var i =0;
+        var j=0;
+        var slider = setInterval(function(){
+            if(i==smallImageArray.length){
+                i=0;
+            }
+            document.getElementById("sliderImage").src=smallImageArray[i].firstElementChild.src;
+            console.log("x");
+            i++;
+        },3000)
+        i=0;
+        document.getElementById("nextImage").addEventListener("click",function() {
+            clearInterval(slider)
+            if(i==6){
+                i=0;
+                j=0;
+                    }
+                document.getElementById("sliderImage").src=smallImageArray[i].firstElementChild.src;
+                i++;
+
+            j=i;
+        })
+        document.getElementById("previousImage").addEventListener("click",function() {
+            clearInterval(slider)
+            if(j==-1){
+                j=5;
+                    }
+                document.getElementById("sliderImage").src=smallImageArray[j].firstElementChild.src;
+                j--;
+
+            i=j;
+        })
+        
+    }

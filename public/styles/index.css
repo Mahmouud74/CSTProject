@@ -124,7 +124,55 @@
 .featured{
     margin-top:10px ;
     min-height: 500px;
+    background-color: black;
+    color: white;
     text-align: center;
+}
+.slider{
+    padding-top: 30px;
+}
+.slider .previous{
+    padding-left: 25px;
+}
+.slider .prev{
+    background-color:rgb(251, 57, 73);
+    float: left;
+    margin-top: 200px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.slider .next{
+    padding-right: 25px;
+}
+.slider .nex{
+    cursor: pointer;
+    background-color:rgb(251, 57, 73);
+    float: right;
+    margin-top: 200px;
+    padding: 10px;
+    font-size: 20px;
+}
+#sliderImage{
+    height: 604px;
+    width: 550px;
+}
+.smallImages{
+    text-align: center;
+    overflow: hidden;
+}
+.smallImages .smallImage{
+    overflow: hidden;
+    float: left;
+    margin: auto;
+    width: 16%;
+    padding: 20px;
+}
+.smallImage img{
+    height: 150px;
+    display: inline-block;
+    width: 100%;
 }
 .featured h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -245,6 +293,7 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    min-height: 380px;
 }
 #registerationForm{
     display: inline-block;
@@ -259,7 +308,7 @@ form
 }
 form input
 {   
-    font-size: 16px;
+    font-size: 15px;
     border-top: 2px #f6745f solid;
     border-left: 2px #f6745f solid;
     border-right: 2px #f6745f solid;
