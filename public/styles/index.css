@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .navBar{
     /*background: radial-gradient(#e6b6af, #e5cf91);*/
@@ -109,6 +110,10 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+.intro .introDescription button a{
+    text-decoration: none;
+    color: #f2eef0;
+}
 .products{
     padding-top: 60px;
     min-height: 700px;
@@ -190,7 +195,7 @@
     background-color: white;
     color: black;
     min-height: 500px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
     overflow: hidden;
@@ -209,14 +214,15 @@
     padding-top: 40px;
 }
 .latestProduct img{
+    cursor: pointer;
     width: 100%;
-    height: 100%;
 }
 .stars{
     cursor: pointer;
     color: rgb(251, 57, 73);
 }
 .footer{
+    border-top: #f6745f 2px solid;
     padding: 20px;
     padding-top: 20px;
     padding-bottom: 60px;
@@ -624,6 +630,7 @@ form label
     padding-top: 40px;
 }
 .latestProduct img{
+    cursor: pointer;
     width: 100%;
     height: 100%;
 }
@@ -749,6 +756,7 @@ form label
     display: none;
 }
 .footer{
+    border-top: 2px solid #f6745f;
     padding: 20px;
     padding-top: 20px;
     padding-bottom: 60px;

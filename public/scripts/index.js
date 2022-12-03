@@ -59,6 +59,7 @@ function index(){
         document.getElementById("register").style.borderBottom="none";
         document.getElementById("login").style.borderBottom="2px solid rgb(251, 57, 73)";
     })
+
     userNameInput.addEventListener("focus",function(){
         for (let i = 0; i < labels.length; i++) {
             if (labels[i].htmlFor == 'userName') {
@@ -237,9 +238,19 @@ function index(){
         }
     })
     submitRegisterButton.addEventListener("click",function(){
+        cookiesConfirmation = confirm("you need to save cookies");
+
         console.log(userNameInput.value);
-        setCookie("userName",userNameInput.value);
-        setCookie("email",emailInput.value);
+        if(!cookiesConfirmation){     
+            setCookie("userName",userNameInput.value);
+            setCookie("email",emailInput.value);
+        }
+        else{
+            let date = new Date();
+            date.setMonth(date.getMonth()+1);
+            setCookie("userName",userNameInput.value,date);
+            setCookie("email",emailInput.value,date);
+        }
 
         event.preventDefault();
 
