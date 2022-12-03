@@ -16,6 +16,7 @@ var emailLoginInput;
 var passwordLoginInput;
 var smallImageArray;
 var submitRegisterButton;
+var logInButton;
 function index(){
     userNameInput=document.getElementById("userName");
     emailInput=document.getElementById("email");
@@ -24,6 +25,7 @@ function index(){
     emailLoginInput =document.getElementById("emailLogin");
     passwordLoginInput=document.getElementById("passwordLogin");
     submitRegisterButton  = document.getElementById("submitRegisterButton");
+    logInButton = document.getElementById("logInButton")
     var playerImg=document.getElementById("playerImg");
     let imgPosition = (getComputedStyle(playerImg).left);
     let imgLocation = parseInt(imgPosition)
@@ -254,6 +256,20 @@ function index(){
 
         event.preventDefault();
 
+    })
+    logInButton.addEventListener("click",function(){
+        if(hasCookie("email")){
+            email = getCookie("email");
+            if(email==emailLoginInput.value){
+                alert("tamam");
+            }
+            else{
+                alert("invalid mail")
+            }
+        }else{
+            alert("there is no emails")
+        }
+        event.preventDefault();
     })
     //slider 
     smallImageArray = document.getElementsByClassName("smallImage");
