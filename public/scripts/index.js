@@ -15,6 +15,7 @@ var passwordInput;
 var emailLoginInput;
 var passwordLoginInput;
 var smallImageArray;
+var submitRegisterButton;
 function index(){
     userNameInput=document.getElementById("userName");
     emailInput=document.getElementById("email");
@@ -22,6 +23,7 @@ function index(){
     passwordInput=document.getElementById("password");
     emailLoginInput =document.getElementById("emailLogin");
     passwordLoginInput=document.getElementById("passwordLogin");
+    submitRegisterButton  = document.getElementById("submitRegisterButton");
     var playerImg=document.getElementById("playerImg");
     let imgPosition = (getComputedStyle(playerImg).left);
     let imgLocation = parseInt(imgPosition)
@@ -57,7 +59,6 @@ function index(){
         document.getElementById("register").style.borderBottom="none";
         document.getElementById("login").style.borderBottom="2px solid rgb(251, 57, 73)";
     })
-    console.log(userNameInput);
     userNameInput.addEventListener("focus",function(){
         for (let i = 0; i < labels.length; i++) {
             if (labels[i].htmlFor == 'userName') {
@@ -235,6 +236,14 @@ function index(){
             document.getElementById("passwordLoginCheckMark").style.display="none";
         }
     })
+    submitRegisterButton.addEventListener("click",function(){
+        console.log(userNameInput.value);
+        setCookie("userName",userNameInput.value);
+        setCookie("email",emailInput.value);
+
+        event.preventDefault();
+
+    })
     //slider 
     smallImageArray = document.getElementsByClassName("smallImage");
     for (let i = 0; i < smallImageArray.length; i++) {
@@ -250,12 +259,10 @@ function index(){
                 i=0;
             }
             document.getElementById("sliderImage").src=smallImageArray[i].firstElementChild.src;
-            console.log("x");
             i++;
         },3000)
         i=0;
         document.getElementById("nextImage").addEventListener("click",function() {
-            console.log(i);
             clearInterval(slider)
             if(i==6){
                 i=0;
